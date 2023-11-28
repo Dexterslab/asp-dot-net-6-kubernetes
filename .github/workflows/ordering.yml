@@ -16,7 +16,6 @@ jobs:
       containerRegistry: 'ashgloboticket.azurecr.io'
       dockerfilePath: 'ordering/Dockerfile'
       deploymentFile: 'ordering.yaml'
-      namespace: 'globoticket'
 
     steps:
     - uses: actions/checkout@v3
