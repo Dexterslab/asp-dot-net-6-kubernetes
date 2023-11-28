@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: catalog
-  namespace: globoticket
   labels:
     app: catalog
 spec:
@@ -19,7 +18,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalog
-  namespace: globoticket
   labels:
     app: catalog
 spec:
@@ -53,5 +51,3 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: Always
-      imagePullSecrets:
-        - name: acr-secret
