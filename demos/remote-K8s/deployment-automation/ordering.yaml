@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: ordering
-  namespace: globoticket
   labels:
     app: ordering
 spec:
@@ -18,7 +17,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ordering
-  namespace: globoticket
   labels:
     app: ordering
 spec:
@@ -28,7 +26,6 @@ spec:
       app: ordering
   template:
     metadata:
-      namespace: globoticket
       labels:
         app: ordering
     spec:
@@ -48,5 +45,3 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: Always
-      imagePullSecrets:
-        - name: acr-secret
