@@ -16,7 +16,7 @@ spec:
 ---
 apiVersion: apps/v1
 kind: Deployment
- metadata:
+metadata:
   name: catalog
   labels:
     app: catalog
@@ -32,8 +32,8 @@ spec:
     spec:
       containers:
       - name: catalog
-         image: ashgloboticket.azurecr.io/catalog:#{Build.BuildId}#
-         resources:
+        image: ashgloboticket.azurecr.io/catalog:#{Build.BuildId}#
+        resources:
           requests:
             memory: "500Mi"
             cpu: "250m"
