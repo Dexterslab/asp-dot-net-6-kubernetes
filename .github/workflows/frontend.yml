@@ -49,7 +49,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.4
       with:
         name: deployfile
-        path: https://github.com/Dexterslab/asp-dot-net-6-kubernetes/blob/main/demos/remote-K8s/deployment-automation/frontend.yaml
+        path: ${{github.workspace}}/demos/remote-k8s/deployment-automation/${{env.deploymentFile}}
         
   deploy:
     runs-on: ubuntu-latest
