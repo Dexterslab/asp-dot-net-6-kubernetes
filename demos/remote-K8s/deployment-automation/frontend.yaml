@@ -3,10 +3,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: frontend
-  namespace: globoticket
   labels:
     app: frontend
-    release: prometheus-operator
 spec:
   selector:
     app: frontend
@@ -21,7 +19,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: globoticket
   labels:
     app: frontend
 spec:
