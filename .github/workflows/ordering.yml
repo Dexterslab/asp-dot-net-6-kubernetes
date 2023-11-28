@@ -54,8 +54,13 @@ jobs:
     - name: Download artifact from build job
       uses: actions/download-artifact@v2
       with:
-        name: deployfile
-          
+        name: deployfile    
+            
+    - uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{secrets.KUBECONFIG}} 
+      id: setcontext
       
     - uses: Azure/k8s-deploy@v4
       with:
