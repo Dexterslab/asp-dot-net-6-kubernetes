@@ -32,8 +32,8 @@ spec:
     spec:
       containers:
       - name: catalog
-        image: ashgloboticket.azurecr.io/catalog:#{Build.BuildId}#
-        resources:
+         image: ashgloboticket.azurecr.io/catalog:#{Build.BuildId}#
+         resources:
           requests:
             memory: "500Mi"
             cpu: "250m"
@@ -44,10 +44,7 @@ spec:
         - name: ASPNETCORE_ENVIRONMENT
           value: Development
         - name: CONNECTIONSTRINGS__DEFAULTCONNECTION
-          valueFrom: 
-            secretKeyRef: 
-              name: catalog-db
-              key: connectionstring
+          value: Server=sqlserver;Database=EventCatalogDb;User=sa;pwd=P@ssW0rd!;MultipleActiveResultSets=true
         ports:
         - containerPort: 80
         imagePullPolicy: Always
