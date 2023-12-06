@@ -23,6 +23,7 @@ public class ConcertController : ControllerBase
       return concertRepository.GetConcerts();
     }
 
+
     [HttpGet("{id}", Name = "GetById")]
     public async Task<Concert> GetById(Guid id)
     {
