@@ -25,6 +25,7 @@ public class OrderController : ControllerBase
         RegisterMetricsOrderProcessed();
         emailSender.SendEmailForOrder(order);
         return Ok();
+
     }
 
     private void RegisterMetricsOrderProcessed()
