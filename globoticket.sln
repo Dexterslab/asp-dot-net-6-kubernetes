@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml Files", "yaml Files", 
 		demos\remote-K8s\deployment-automation\catalog.yaml = demos\remote-K8s\deployment-automation\catalog.yaml
 		demos\remote-K8s\deployment-automation\frontend.yaml = demos\remote-K8s\deployment-automation\frontend.yaml
 		demos\remote-K8s\deployment-automation\ordering.yaml = demos\remote-K8s\deployment-automation\ordering.yaml
+		demos\remote-K8s\deployment-automation\sqlserver.yaml = demos\remote-K8s\deployment-automation\sqlserver.yaml
 	EndProjectSection
 EndProject
 Global
