@@ -44,7 +44,12 @@ spec:
         - name: ASPNETCORE_ENVIRONMENT
           value: Development
         - name: CONNECTIONSTRINGS__DEFAULTCONNECTION
-          value: Server=mssql-service;Database=EventCatalogDb;User=sa;pwd=P@ssW0rd!;MultipleActiveResultSets=true
+          value: Server=mssql-service;Database=EventCatalogDb;User=sa;pwd=$(SA_PASSWORD);MultipleActiveResultSets=true
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql-secret
+              key: SA_PASSWORD
         ports:
         - containerPort: 80
         imagePullPolicy: Always
